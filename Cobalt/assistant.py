@@ -1,6 +1,6 @@
 import subprocess
-from .utils.json_parser import parse_ljson
-from .utils.rich_console import console
+from .utils import parse_ljson
+from .utils import console
 
 
 ENCODING_FORMAT = "utf-8"

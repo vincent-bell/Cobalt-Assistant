@@ -1,2 +1,2 @@
 from .assistant import Assistant
-from .utils.templates import input
+from .utils import input
