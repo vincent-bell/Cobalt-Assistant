@@ -15,8 +15,16 @@
     },
     {
         "id": 2,
-        "inputs": [],
-        "outputs": [],
+        "inputs": [
+            1,
+            4,
+            9
+        ],
+        "outputs": [
+            3,
+            12,
+            27
+        ],
         "status": "incomplete"
     }
 ]

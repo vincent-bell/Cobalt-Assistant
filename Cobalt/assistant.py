@@ -18,6 +18,7 @@ class Assistant:
         for task in tasks:
             if task["status"] == "incomplete":
                 return task["id"], task["inputs"], task["outputs"]
+        return None, None, None
     
     def run_current_task(self):
         tester = Tester(self.current_task, self.inputs, self.outputs)
@@ -26,8 +27,8 @@ class Assistant:
 
 class Tester:
     def __init__(self, task_id: int = 0, inputs: list = None, outputs: list = []):
-        if task_id != 0: self.task_id = task_id
-        if inputs: self.inputs = inputs
+        self.task_id = task_id if task_id != 0 else None
+        self.inputs = inputs if inputs else None
         self.outputs = outputs
 
     def __testeq__(self, inv: any, outv: any):
@@ -53,6 +54,7 @@ class Tester:
                 elif ro.stderr:
                     console.print(ro.stderr.decode(ENCODING_FORMAT))
                 else:
+                    print(output, self.outputs[test_count - 1])
                     console.print("    Failed...")
                 test_count += 1
             if passed +1 == test_count:
