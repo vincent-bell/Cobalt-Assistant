@@ -1,8 +1,16 @@
 [
     {
         "id": 1,
-        "inputs": [1, 3, 5],
-        "outputs": [1, 9, 25],
+        "inputs": [
+            1,
+            3,
+            5
+        ],
+        "outputs": [
+            1,
+            9,
+            25
+        ],
         "status": "incomplete"
     },
     {
