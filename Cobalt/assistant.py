@@ -1,5 +1,4 @@
 import subprocess
-from .tester import Tester
 from .utils.json_parser import parse_ljson
 from .utils.rich_console import console
 
