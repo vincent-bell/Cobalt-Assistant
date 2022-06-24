@@ -65,3 +65,8 @@ class Tester:
         tasks[self.task_id - 1]["status"] = "completed"
         with open("Cobalt/lesson.json", 'w') as f:
             f.write(dumps(tasks, indent=4))
+
+
+def run_assistant() -> None:
+    assistant = Assistant()
+    assistant.run_current_task()
